@@ -9,6 +9,9 @@ export const APP_ROUTES: Routes = [
     path: "cocktails",
     component: CocktailContainerComponent,
     children: [
+      { path: "new", component: CocktailEditComponent },
+      { path: ":index/edit", component: CocktailEditComponent },
+
       { path: ":index", component: CocktailDetailsComponent },
       { path: "", redirectTo: "0", pathMatch: "full" }
     ]
